@@ -1,0 +1,29 @@
+<header>setValue function of ngForm</header>
+<form (ngSubmit)="onSubmit()" #f1="ngForm">
+  <button (click)="fillValueSet()">FillValue</button>
+  <br><br>
+  <div class="form-group">
+    <label for="label1"> Label 1 : </label>
+    <input type="text" class="form-control" name="label1" ngModel id="label1" />
+    <br>
+    <label for="label2"> Label 2 : </label>
+    <input type="text" class="form-control" name="label2" ngModel id="label2" />
+  </div>
+  <br>
+  <button type="submit">Submit</button>
+</form>
+<br>
+<br>
+<header>patchValue</header>
+<form (ngSubmit)="onSubmit()" #f2="ngForm">
+<button (click)="fillValuePatch()">Fill Value</button>
+<div class="form-group">
+  <label for="label3"> Label 3 : </label>
+  <input type="text" class="form-control" name="label3" ngModel  id="label3"/>
+  <br>
+  <label for="label4"> Label 4 : </label>
+  <input type="text" class="form-control" name="label4" ngModel  id="label4"/>
+</div>
+<br>
+<button type="submit">Submit</button>
+</form>

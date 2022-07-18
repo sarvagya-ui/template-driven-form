@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSubmit()" #f="ngForm">
+  <div class="form-group">
+    <label for="label"> Label : </label>
+    <input type="text" class="form-control" id="label" name="label" ngModel #labelVar="ngModel" required />
+    <span *ngIf="f.control.invalid && f.control.touched">Please input some value</span>
+  </div><br>
+  <button>Submit</button>
+</form>
+
+<!-- Note :- f.control.invalid and f.control.touched can be replaced to make
+the condition shoter , by changing in input and span. -->
+<!--  -->
+<!-- <input type="text" class="form-control" id="label" name="label" ngModel #labelVar="ngModel" required />
+<span *ngIf="labelVar.invalid && labelVar.touched">Please input some value</span> -->

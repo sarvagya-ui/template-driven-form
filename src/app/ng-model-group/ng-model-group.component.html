@@ -1,0 +1,43 @@
+<header> This groups multiple form-controls </header>
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div ngModelGroup="modelGroupName">
+    <div class="form-group">
+      <label for="label1"> Label 1 : </label>
+      <input type="text" class="form-control" name="label1" ngModel id="label1">
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="label2"> Label 2: </label>
+      <input type="text" class="form-control" name="label2" ngModel id="label2">
+    </div>
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="outsideGroup"> Label 3:  </label>
+    <input type="text" class="form-control" name="outsideGroup" id="outsideGroup" ngModel>
+  </div>
+  <button type="submit">Submit</button>
+</form>
+
+
+<!-- <header> This groups multiple form-controls Validations</header>
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div ngModelGroup="modelGroupName" #groupModelVaiable="ngModelGroup">
+    <div class="form-group">
+      <label for="label1"> Label 1 : </label>
+      <input type="text" class="form-control" name="label1" ngModel id="label1" required>
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="label2"> Label 2: </label>
+      <input type="text" class="form-control" name="label2" ngModel id="label2" required>
+    </div>
+  </div>
+  <span *ngIf="groupModelVaiable.invalid && groupModelVaiable.touched">Please enter label 1 and Label 2</span>
+  <br>
+  <div class="form-group">
+    <label for="outsideGroup"> Label 3:  </label>
+    <input type="text" class="form-control" name="outsideGroup" id="outsideGroup" ngModel>
+  </div>
+  <button type="submit">Submit</button>
+</form> -->

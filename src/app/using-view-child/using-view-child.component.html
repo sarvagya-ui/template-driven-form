@@ -1,0 +1,7 @@
+<form (ngSubmit)="onSubmit()" #f="ngForm">
+  <div class="form-group">
+    <label for="label">Label : </label>
+    <input class="form-control" type="text" id="label" name="label" (input)="checkData()" ngModel/>
+  </div>
+  <button type="submit">Submit</button>
+</form>

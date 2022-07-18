@@ -1,0 +1,19 @@
+<header>Get Form Data</header>
+<form (ngSubmit)="onSubmit()" #f="ngForm">
+  <div class="form-group">
+    <label for="label1"> Label 1 : </label>
+    <input type="text" name="label1" id="label1" class="form-control" ngModel />
+    <br>
+    <label for="label2"> Label 2 :</label>
+    <input type="text" class="form-control" name="label2" ngModel id="label2">
+  </div>
+  <button type="submit">Submit</button>
+</form>
+
+<div *ngIf="isFormSubmitted">
+  {{model?.label1}}
+  {{model?.label1}}
+</div>
+
+
+

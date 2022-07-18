@@ -1,0 +1,19 @@
+<!-- <header>Property Binding</header>
+<form (ngSubmit)="onSubmit()" #f="ngForm">
+  <div class="form-group">
+    <label for="label">Label : </label>
+    <input type="text" class="form-control" name="label" [ngModel]="labelVariable" id="label" />
+  </div>
+  <button>Submit</button>
+</form><br> -->
+
+<header>Two way Binding</header><br>
+<form (ngSubmit)="onSubmit()" #f="ngForm">
+  <div class="form-group">
+    <label for="label">Label : </label>
+    <input type="text" class="form-control" name="label" [(ngModel)]="labelVariable" id="label" />
+  </div>
+  <button>Submit</button>
+</form>
+
+{{labelVariable}}
